@@ -15,11 +15,11 @@ pip install -e .
 For foundation models with fewer than (including) 2.5B parameters, we can train the model using Zero Stage 2:
 
 ```
-export NODES=10
-export GPUS_PER_NODE=4
-export MASTER_ADDR=x3006c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
+export NODES=6
+export GPUS_PER_NODE=3
+# export MASTER_ADDR=x3006c0s13b1n0.hsn.cm.polaris.alcf.anl.gov
 export LR=1e-4
-export EPOCHS=20
+export EPOCHS=2
 export TRAIN_BATCH_SIZE=2
 export ACCUMULATION=1
 export EVAL_BATCH_SIZE=1
