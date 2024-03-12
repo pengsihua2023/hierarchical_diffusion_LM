@@ -27,7 +27,7 @@ export SAVE_TOTAL_LIMIT=5
 export SAVE_FOLDER=2.5B_${NODES}nodes_deepspeed_diffusion_sep_checkpoints_${LR}
 export TRAIN_FILE=data/sample_train.txt
 export TEST_FILE=data/sample_val.txt
-export CL_MODEL=/lus/eagle/projects/CVD-Mol-AI/yuntian/genomenewnaive/encoder_93810/run_l0.001_b32/checkpoints
+export CL_MODEL=/scratch/sp96859/GenSLM/hierarchical_diffusion_LM/checkpoints
 export MODEL=EleutherAI/gpt-neox-20b # doesn't matter, will be ignored
 deepspeed --num_gpus=${GPUS_PER_NODE} --num_nodes=${NODES} --master_addr=${MASTER_ADDR} --hostfile=hostfile --master_port=54321 examples/pytorch/language-modeling/run_clm_genslm_2.5B.py \
        --per_device_train_batch_size=${TRAIN_BATCH_SIZE} \
